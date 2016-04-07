@@ -1,11 +1,14 @@
-<a href="#">Inbox <span class="badge">42</span></a>
+<link rel="stylesheet" type="text/css" href="../thirdparty/boostrap/bootstrap/css/bootstrap.css">
 
-<button class="btn btn-primary" type="button">
-  Messages <span class="badge">4</span>
-</button>
+<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" data-bind="value: teste">
+<label for="exampleInputEmail1" data-bind="text: teste"></label>
 
-<script src="../thirdparty/jquery-2.2.2.min.js" />
-<script src="../thirdparty/boostrap/bootstrap-3.3.6-dist/js/bootstrap.min.js" />
-<script src="../thirdparty/boostrap/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css" />
-<script src="../thirdparty/jquery-2.2.2.min.js" />
-<script src="../scripts/lib/ko_3.js" />
+<script src="../thirdparty/jquery-2.2.2.min.js"></script>
+<script src="../thirdparty/boostrap/bootstrap/js/bootstrap.js"></script>
+<!--<script src="../thirdparty/jquery-2.2.2.min.js" />-->
+<script src="../scripts/lib/ko_3.js"></script>
+<script src="../scripts/pages/indexVM.js"></script>
+
+<script>	
+	ko.applyBindings(new indexModule.indexViewModel()); 
+</script>
