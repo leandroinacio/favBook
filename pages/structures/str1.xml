@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p title="Teste1">
+    <box title="Site 1" url="www.google.com" img="../img/test.jpg">
+        <teste />
+        <outro />
+        <tag />
+    </box>
+</p>
