@@ -1,18 +1,17 @@
-utilModule = function() 
-{
+util = {
 	
-	var notifyLoad = function() 
+	notifyLoad: function() 
 	{
 		$.notify("Loading...", "info");
-	};
+	},
 
-	var notifyFinish = function() 
+	notifyFinish: function() 
 	{
 		//code to close loading
-	}
+	},
 
-	var notifyError = function(msg) 
+	notifyError: function(msg) 
 	{
 		$.notify(msg, "error");
 	}
-}();
+};
