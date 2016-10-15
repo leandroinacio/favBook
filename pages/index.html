@@ -31,7 +31,8 @@
 			</div>
 			<!--/ Top options -->
 
-			<div class="container">
+			<!-- Start posts bind -->
+			<div class="container"  data-bind="foreach: posts">
 
 				<!-- Line for record -->
 				<div class="row">
@@ -43,16 +44,16 @@
 					    </a>
 
 					</div>
-					<div class="col-sm-2">
+					<div class="col-sm-1">
 						
 						<!-- Title -->
-						<a href="#">Titulo</a>
+						<a href="#" data-bind="text: title"></a>
 
 					</div>
-					<div class="col-sm-6">
+					<div class="col-sm-7">
 						
 						<!-- Description -->
-						<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+						<p data-bind="text: content"></p>
 
 					</div>
 					<div class="col-sm-2">
@@ -77,7 +78,7 @@
 						<!-- Average note -->
 						<div class="row">
 							<button class="btn btn-primary" type="button">
-								M&eacute;dia <span class="badge">4</span>
+								M&eacute;dia <span class="badge" data-bind="text: average"></span>
 							</button>
 						</div>
 
@@ -89,18 +90,20 @@
 
 		</div>
 
+		<!-- Import scripts -->
 		<script type="text/javascript" src="../thirdparty/jquery-2.2.2.min.js"></script>
 		<script type="text/javascript" src="../thirdparty/boostrap/bootstrap-3.3.6-dist/js/bootstrap.js"></script>
 		<script type="text/javascript" src="../thirdparty/notify.js"></script>
 		<script type="text/javascript" src="../thirdparty/ko_3.js"></script>
 
+		<script type="text/javascript" src="../scripts/pages/post.js"></script>
 		<script type="text/javascript" src="../scripts/pages/indexVM.js"></script>
-		<script type="text/javascript" src="../scripts/util/default.js"></script>
-
+		
 		<script>
 			$(document).ready(function () {
 				ko.applyBindings(new indexModule.indexViewModel()); 
 			});
 		</script>
+		<!--/ Import scripts -->
 	</body>
 </html>

@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../thirdparty/boostrap/bootstrap-3.3.6-dist/css/bootstrap.css">
+		<title>Favorite Book</title>
+	</head>
+	<body>
+
+		<div class="container">
+			<div class="jumbotron">
+
+				<!-- User and password fields -->
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">User</span>
+					<input type="text" class="form-control" placeholder="Derp" aria-describedby="basic-addon1">
+				</div>
+				<br/>
+
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">Password</span>
+					<input type="password" class="form-control" placeholder="*******" aria-describedby="basic-addon1">
+				</div>
+				<br/>
+				<button type="submit" class="btn btn-default">Login</button>
+				<!--/ User and password fields -->
+
+			</div>
+		</div>
+
+		<!-- Import scripts -->
+		<script type="text/javascript" src="../thirdparty/jquery-2.2.2.min.js"></script>
+		<script type="text/javascript" src="../thirdparty/boostrap/bootstrap-3.3.6-dist/js/bootstrap.js"></script>
+		<script type="text/javascript" src="../thirdparty/notify.js"></script>
+		<script type="text/javascript" src="../thirdparty/ko_3.js"></script>
+
+		<script type="text/javascript" src="../scripts/pages/indexVM.js"></script>
+		<script type="text/javascript" src="../scripts/util/default.js"></script>
+
+		<script>
+			$(document).ready(function () {
+				debugger;
+				ko.applyBindings(new indexModule.indexViewModel()); 
+			});
+		</script>
+		<!--/ Import scripts -->
+	</body>
+</html>
